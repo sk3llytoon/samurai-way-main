@@ -3,7 +3,7 @@ import s from './Post.module.css';
 
 type MessagePropsType={
     message: string;
-    likes: string
+    likes: number
 }
 
 export const Post = (props: MessagePropsType) => {
