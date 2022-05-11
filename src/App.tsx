@@ -10,13 +10,19 @@ import {Settings} from "./components/Settings/Settings";
 import {BrowserRouter, Route} from "react-router-dom";
 
 function App() {
+
+    let posts = [
+        {id: 1, message: "Hi, how are you?", likesCount: 4},
+        {id: 2, message: "Shut the fuck up", likesCount: 8}
+    ]
+
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
                 <Header/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                    <Route path='/profile' render={() => <Profile/>}/>
+                    <Route path='/profile' render={() => <Profile posts={posts}/>}/>
                     <Route path='/dialogs' render={() => <Dialogs/>}/>
                     <Route path='/news' render={() => <News/>}/>
                     <Route path='/music' render={() => <Music/>}/>
