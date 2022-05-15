@@ -2,18 +2,13 @@ import React from "react";
 import s from './Profile.module.css'
 import {MyPosts} from "./MyPosts/MyPosts";
 import {ProfileInfo} from "./ProfileInfo/ProfileInfo";
+import {PostsType} from "../../redux/state";
 
-type PostsArrayType={
-    id: number,
-    message: string,
-    likesCount: number
+type ProfileType={
+    posts:PostsType[]
 }
 
-type PostsPropsType={
-    posts: Array<PostsArrayType>
-}
-
-export const Profile = (props:PostsPropsType) => {
+export const Profile = (props:ProfileType) => {
 
     return (
         <div>
