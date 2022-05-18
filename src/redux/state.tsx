@@ -28,7 +28,7 @@ type MessagesPageType = {
     dialogs: Array<DialogsType>
 }
 
-export let state = {
+export const state = {
     profilePage: {
         posts: [
             {id: 1, message: "Hi, how are you?", likesCount: 4},
